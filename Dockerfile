@@ -1,6 +1,7 @@
-ARG VERSION
 FROM debian:stretch
 LABEL maintainer="Matthias Blaser <mb@emgag.com>"
+
+ARG VERSION
 
 RUN apt-get update && apt-get install -y \
         curl \
@@ -8,7 +9,7 @@ RUN apt-get update && apt-get install -y \
         mysql-client \
     && rm -rf /var/lib/apt/lists/*
 
-RUN  curl -sS http://repo.proxysql.com/ProxySQL/repo_pub_key | apt-key add - \
+RUN curl -sS http://repo.proxysql.com/ProxySQL/repo_pub_key | apt-key add - \
     && echo "deb http://repo.proxysql.com/ProxySQL/proxysql-1.4.x/stretch/ ./" \
         | tee /etc/apt/sources.list.d/proxysql.list \
     && apt-get update && apt-get install -y \
