@@ -1,6 +1,6 @@
 .PHONY: build
 
-VERSION := "1.4.10"
+VERSION := "1.4.12"
 IMAGE := "emgag/proxysql"
 
 build:
