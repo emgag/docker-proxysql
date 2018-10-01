@@ -18,8 +18,9 @@ RUN curl -sS http://repo.proxysql.com/ProxySQL/repo_pub_key | apt-key add - \
 
 VOLUME /var/lib/proxysql
 
-EXPOSE 8032
-EXPOSE 8033
+EXPOSE 6032
+EXPOSE 6033
+EXPOSE 6080
 
 ENTRYPOINT ["proxysql", "-f"]
 
