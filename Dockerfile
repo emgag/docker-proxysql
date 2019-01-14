@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
         curl \
         gnupg \
         mysql-client \
+    && apt-get clean \
+    && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN curl -sS http://repo.proxysql.com/ProxySQL/repo_pub_key | apt-key add - \
@@ -14,6 +16,8 @@ RUN curl -sS http://repo.proxysql.com/ProxySQL/repo_pub_key | apt-key add - \
         | tee /etc/apt/sources.list.d/proxysql.list \
     && apt-get update && apt-get install -y \
         proxysql=${VERSION} \
+    && apt-get clean \
+    && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
 VOLUME /var/lib/proxysql
