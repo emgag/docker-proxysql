@@ -6,8 +6,7 @@
 
 Docker [proxysql](http://www.proxysql.com/) image used within EMGAG environments. 
 
-**WARNING**: this is not production ready yet. 
-
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.4.15`, `1.4`, `latest` (*Dockerfile*)](https://github.com/emgag/docker-proxysql/blob/master/Dockerfile)
+- [`2.0.2` (*2.0.2/Dockerfile*)](https://github.com/emgag/docker-proxysql/blob/master/1.4/Dockerfile)
+- [`1.4.15` (*1.4.15/Dockerfile*)](https://github.com/emgag/docker-proxysql/blob/master/2.0/Dockerfile)
