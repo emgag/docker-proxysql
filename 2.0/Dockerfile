@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 LABEL maintainer="Matthias Blaser <mb@emgag.com>"
 
 ARG VERSION
@@ -6,7 +6,7 @@ ARG VERSION
 RUN apt-get update && apt-get install -y \
         curl \
         gnupg \
-        mysql-client \
+        default-mysql-client \
     && apt-get clean \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
